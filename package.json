@@ -1,0 +1,52 @@
+{
+  "name": "babel-preset-jam",
+  "version": "0.1.0",
+  "description": "all official proposed plugins for babel 7",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run test && babel src -d lib",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "format": "prettier --write ./src/**/*.js",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run clean && npm run build",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejamninja/babel-preset-jam.git"
+  },
+  "keywords": [
+    "babel",
+    "preset",
+    "es6",
+    "babel7",
+    "plugin",
+    "proposed"
+  ],
+  "author": "Jam Risser <jam@codejam.ninja> (https://codejam.ninja)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codejamninja/babel-preset-jam/issues"
+  },
+  "homepage": "https://github.com/codejamninja/babel-preset-jam#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "prettier": "^1.15.3"
+  },
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-plugin-transform-async-super": "^1.0.0",
+    "babel-preset-everything": "^0.2.1"
+  },
+  "eslintIgnore": [
+    "lib"
+  ]
+}

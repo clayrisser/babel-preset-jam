@@ -15,6 +15,6 @@ export default declare((_api, opts) => {
       ],
       'babel-preset-everything'
     ],
-    plugins: ['babel-plugin-transform-async-super']
+    plugins: ['babel-plugin-transform-async-super', 'babel-plugin-macros']
   };
 });

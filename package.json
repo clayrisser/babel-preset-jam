@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-jam",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "all official proposed plugins for babel 7",
   "main": "lib/index.js",
   "scripts": {
@@ -43,6 +43,7 @@
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.0.0",
     "@babel/preset-env": "^7.4.5",
+    "babel-plugin-macros": "^2.6.1",
     "babel-plugin-transform-async-super": "^1.0.0",
     "babel-preset-everything": "^0.3.1"
   },

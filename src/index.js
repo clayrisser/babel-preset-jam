@@ -8,8 +8,10 @@ export default declare((_api, opts) => {
         {
           ...opts,
           targets: {
-            ...opts?.targets,
-            node: '6'
+            corejs: 3,
+            node: '6',
+            useBuiltIns: 'usage',
+            ...opts?.targets
           }
         }
       ],

@@ -6,11 +6,11 @@ export default declare((_api, opts) => {
       [
         '@babel/preset-env',
         {
+          corejs: 3,
+          useBuiltIns: 'usage',
           ...opts,
           targets: {
-            corejs: 3,
             node: '6',
-            useBuiltIns: 'usage',
             ...opts?.targets
           }
         }

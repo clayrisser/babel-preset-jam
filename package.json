@@ -1,15 +1,16 @@
 {
   "name": "babel-preset-jam",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "all official proposed plugins for babel 7",
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run test && babel src -d lib",
     "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
-    "format": "prettier --write ./src/**/*.js",
+    "clean:purge": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "format": "prettier --write ./**/*.{json,md,scss,yaml,yml,js,jsx} --ignore-path .gitignore",
     "lint": "npm run format && eslint ./",
     "lint:fix": "npm run format && eslint --fix ./",
-    "prepublish": "npm run clean && npm run build",
+    "prepublish": "npm run build",
     "test": "npm run lint"
   },
   "repository": {
@@ -23,6 +24,9 @@
     "babel7",
     "plugin",
     "proposed"
+  ],
+  "files": [
+    "lib"
   ],
   "author": "Jam Risser <jam@codejam.ninja> (https://codejam.ninja)",
   "license": "MIT",
@@ -38,7 +42,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-import": "^2.17.3",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "@babel/helper-plugin-utils": "^7.0.0",

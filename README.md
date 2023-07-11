@@ -4,6 +4,8 @@
 
 > all official proposed plugins for babel 7
 
+![](assets/babel-present-jam.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 ## Features
